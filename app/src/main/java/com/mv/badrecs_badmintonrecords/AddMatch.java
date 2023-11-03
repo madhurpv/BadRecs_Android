@@ -54,7 +54,7 @@ public class AddMatch extends AppCompatActivity {
     List<String> tableViewMyScoreEntries = new ArrayList<>();
     List<String> tableViewOpponentScoreEntries = new ArrayList<>();
 
-    // TODO : Back button popup
+    // TODO : Add warning if length of scores = 0
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -108,7 +108,7 @@ public class AddMatch extends AppCompatActivity {
             }
         });
 
-        addButtonCardView.setOnClickListener(new View.OnClickListener() {  // TODO : Add names of players in players list
+        addButtonCardView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 if(opponent1EditText.getText().toString().isEmpty()){
@@ -178,17 +178,51 @@ public class AddMatch extends AppCompatActivity {
                     if(!statsClass.is_friend(opponent1EditText.getText().toString())){
                         statsClass.add_friend(opponent1EditText.getText().toString());
                     }
+                    else{
+                        FriendClass friendClass = statsClass.get_friend(opponent1EditText.getText().toString());
+                        if(newMatch.win == MatchClass.MATCH_WIN){
+                            friendClass.for_score++;
+                        }
+                        else if(newMatch.win == MatchClass.MATCH_LOSE){
+                            friendClass.against_score++;
+                        }
+                        friendClass.for_points += Integer.parseInt(tableViewMyScoreEntries.get(tableViewMyScoreEntries.size()-1).trim());
+                        friendClass.against_points += Integer.parseInt(tableViewOpponentScoreEntries.get(tableViewMyScoreEntries.size()-1).trim());
+                        statsClass.update_friend(friendClass);
+                    }
                 }
 
                 if(!opponent2EditText.getText().toString().isEmpty()){
                     if(!statsClass.is_friend(opponent2EditText.getText().toString())){
                         statsClass.add_friend(opponent2EditText.getText().toString());
                     }
+                    else{
+                        FriendClass friendClass = statsClass.get_friend(opponent2EditText.getText().toString());
+                        if(newMatch.win == MatchClass.MATCH_WIN){
+                            friendClass.for_score++;
+                        }
+                        else if(newMatch.win == MatchClass.MATCH_LOSE){
+                            friendClass.against_score++;
+                        }
+                        friendClass.for_points += Integer.parseInt(tableViewMyScoreEntries.get(tableViewMyScoreEntries.size()-1).trim());
+                        friendClass.against_points += Integer.parseInt(tableViewOpponentScoreEntries.get(tableViewMyScoreEntries.size()-1).trim());
+                        statsClass.update_friend(friendClass);
+                    }
                 }
 
                 if(!teamMateEditText.getText().toString().isEmpty()){
                     if(!statsClass.is_friend(teamMateEditText.getText().toString())){
                         statsClass.add_friend(teamMateEditText.getText().toString());
+                    }
+                    else{
+                        FriendClass friendClass = statsClass.get_friend(opponent1EditText.getText().toString());
+                        if(newMatch.win == MatchClass.MATCH_WIN){
+                            friendClass.won_with++;
+                        }
+                        else if(newMatch.win == MatchClass.MATCH_LOSE){
+                            friendClass.lost_with++;
+                        }
+                        statsClass.update_friend(friendClass);
                     }
                 }
                 String statsClassJson = gson.toJson(statsClass);

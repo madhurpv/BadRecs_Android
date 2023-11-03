@@ -42,6 +42,25 @@ public class StatsClass {
         return false;
     }
 
+    public FriendClass get_friend(String friendName){
+        for(int i=0; i<no_of_friends; i++){
+            if(friendClassList.get(i).name.equals(friendName)){
+                return friendClassList.get(i);
+            }
+        }
+        return null;
+    }
+
+    public void update_friend(FriendClass friendClass){
+        for(int i=0; i<no_of_friends; i++){
+            if(friendClassList.get(i).equals(friendClass)){
+                friendClassList.remove(i);
+                friendClassList.add(friendClass);
+                return;
+            }
+        }
+    }
+
 
 
 }
