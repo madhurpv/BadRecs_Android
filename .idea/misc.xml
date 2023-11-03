@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/users/madhur/Apps/AndroidStudio/Projects/BadRecsBadmintonRecords/app/src/main/res/drawable/ic_baseline_add_circle_24.xml" value="0.2465" />
+        <entry key="..\:/users/madhur/Apps/AndroidStudio/Projects/BadRecsBadmintonRecords/app/src/main/res/drawable/ic_baseline_remove_circle_24.xml" value="0.17" />
+        <entry key="..\:/users/madhur/Apps/AndroidStudio/Projects/BadRecsBadmintonRecords/app/src/main/res/drawable/rounded_corners_background_dialog.xml" value="0.1335" />
+        <entry key="..\:/users/madhur/Apps/AndroidStudio/Projects/BadRecsBadmintonRecords/app/src/main/res/drawable/tablelayout_divider.xml" value="0.2" />
+        <entry key="..\:/users/madhur/Apps/AndroidStudio/Projects/BadRecsBadmintonRecords/app/src/main/res/drawable/tablerow_background.xml" value="0.17" />
+        <entry key="..\:/users/madhur/Apps/AndroidStudio/Projects/BadRecsBadmintonRecords/app/src/main/res/layout/activity_add_match.xml" value="0.32407407407407407" />
+        <entry key="..\:/users/madhur/Apps/AndroidStudio/Projects/BadRecsBadmintonRecords/app/src/main/res/layout/activity_home.xml" value="0.2" />
+        <entry key="..\:/users/madhur/Apps/AndroidStudio/Projects/BadRecsBadmintonRecords/app/src/main/res/layout/activity_main.xml" value="0.20697463768115942" />
+        <entry key="..\:/users/madhur/Apps/AndroidStudio/Projects/BadRecsBadmintonRecords/app/src/main/res/layout/activity_start.xml" value="0.176" />
+        <entry key="..\:/users/madhur/Apps/AndroidStudio/Projects/BadRecsBadmintonRecords/app/src/main/res/layout/dialog_homeactivity.xml" value="0.8" />
+        <entry key="..\:/users/madhur/Apps/AndroidStudio/Projects/BadRecsBadmintonRecords/app/src/main/res/layout/dialog_searchable_spinner.xml" value="0.2" />
+        <entry key="..\:/users/madhur/Apps/AndroidStudio/Projects/BadRecsBadmintonRecords/app/src/main/res/layout/home_recyclerrow.xml" value="0.4" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="JDK" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+</project>

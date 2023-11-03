@@ -1,0 +1,305 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFBF00"
+    tools:context=".AddMatch">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="20dp"
+        app:cardCornerRadius="20dp"
+        app:cardElevation="20dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#FFFFFF">
+
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:fontFamily="cursive"
+                android:text="Add New Match"
+                android:textColor="#888888"
+                android:textSize="50sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+            <TextView
+                android:id="@+id/nameTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="76dp"
+                android:layout_marginTop="26dp"
+                android:backgroundTint="#FFBF00"
+                android:fontFamily="cursive"
+                android:text="Name vs "
+                android:textColor="#888888"
+                android:textColorHint="#A5A5A5"
+                android:textSize="23sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+            <EditText
+                android:id="@+id/opponent1EditText"
+                android:layout_width="120dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="28dp"
+                android:layout_marginTop="16dp"
+                android:backgroundTint="#FFBF00"
+                android:fontFamily="cursive"
+                android:hint="Opponent"
+                android:textColor="#888888"
+                android:textColorHint="#A5A5A5"
+                android:textSize="22sp"
+                app:layout_constraintStart_toEndOf="@+id/nameTextView"
+                app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+            <EditText
+                android:id="@+id/opponent2EditText"
+                android:layout_width="120dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="28dp"
+                android:layout_marginTop="-5dp"
+                android:backgroundTint="#FFBF00"
+                android:fontFamily="cursive"
+                android:hint="Opponent 2"
+                android:textColor="#888888"
+                android:textColorHint="#A5A5A5"
+                android:textSize="22sp"
+                app:layout_constraintStart_toEndOf="@+id/nameTextView"
+                app:layout_constraintTop_toBottomOf="@+id/opponent1EditText" />
+
+            <EditText
+                android:id="@+id/teamMateEditText"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="64dp"
+                android:layout_marginTop="-5dp"
+                android:backgroundTint="#FFBF00"
+                android:fontFamily="cursive"
+                android:hint="Teammate"
+                android:textColor="#888888"
+                android:textColorHint="#A5A5A5"
+                android:textSize="22sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/opponent1EditText" />
+
+            <SeekBar
+                android:id="@+id/seekBarWin"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="152dp"
+                android:min="0"
+                android:max="2"
+                android:progress="1"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.498"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/opponent1EditText" />
+
+            <TextView
+                android:id="@+id/textView3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="cursive"
+                android:text="W"
+                android:textColor="#2FFF00"
+                android:textSize="20sp"
+                app:layout_constraintBottom_toTopOf="@+id/seekBarWin"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.382"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="cursive"
+                android:text="\?"
+                android:textColor="#8C8C8C"
+                android:textSize="20sp"
+                app:layout_constraintBottom_toTopOf="@+id/seekBarWin"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="cursive"
+                android:text="L"
+                android:textColor="#FF0000"
+                android:textSize="20sp"
+                app:layout_constraintBottom_toTopOf="@+id/seekBarWin"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.618"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardView"
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:layout_margin="15dp"
+                android:layout_marginTop="36dp"
+                app:cardCornerRadius="15dp"
+                app:cardElevation="5dp"
+                android:backgroundTint="#FFFFFF"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/seekBarWin">
+
+
+                <EditText
+                    android:id="@+id/descriptionEditText"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="5dp"
+                    android:backgroundTint="#FFBF00"
+                    android:textColor="#888888"
+                    android:textColorHint="#A5A5A5"
+                    android:fontFamily="cursive"
+                    android:hint="Description...."
+                    android:lines="3"
+                    android:padding="5dp" />
+
+
+            </androidx.cardview.widget.CardView>
+
+            <ScrollView
+                android:id="@+id/scrollView2"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_margin="20dp"
+                app:layout_constraintBottom_toTopOf="@+id/constraintLayout"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/cardView">
+
+                <TableLayout
+                    android:id="@+id/tableLayoutDisplay"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:divider="@drawable/tablelayout_divider"
+                    android:showDividers="middle"
+                    android:stretchColumns="*" />
+
+            </ScrollView>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/constraintLayout"
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
+                android:layout_marginBottom="52dp"
+                android:background="#FFF1C9"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent">
+
+                <ImageView
+                    android:id="@+id/imageViewRemoveEntry"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:src="@drawable/ic_baseline_remove_circle_24"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+
+                <ImageView
+                    android:id="@+id/imageViewAddEntry"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_baseline_add_circle_24"
+                    android:layout_marginEnd="16dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/scoreDashTextView"
+                    android:layout_width="30dp"
+                    android:layout_height="60dp"
+                    android:layout_margin="5dp"
+                    android:backgroundTint="#FFBF00"
+                    android:fontFamily="cursive"
+                    android:padding="5dp"
+                    android:textColor="#888888"
+                    android:textColorHint="#A5A5A5"
+                    android:inputType="number"
+                    android:text="-"
+                    android:gravity="center"
+                    android:textSize="40sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <EditText
+                    android:id="@+id/scoreMyEditText"
+                    android:layout_width="30dp"
+                    android:layout_height="60dp"
+                    android:layout_margin="5dp"
+                    android:backgroundTint="#FFBF00"
+                    android:fontFamily="cursive"
+                    android:inputType="number"
+                    android:padding="5dp"
+                    android:textColor="#888888"
+                    android:textColorHint="#A5A5A5"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@+id/scoreDashTextView"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <EditText
+                    android:id="@+id/scoreOpponentEditText"
+                    android:layout_width="30dp"
+                    android:layout_height="60dp"
+                    android:layout_margin="5dp"
+                    android:backgroundTint="#FFBF00"
+                    android:fontFamily="cursive"
+                    android:inputType="number"
+                    android:padding="5dp"
+                    android:textColor="#888888"
+                    android:textColorHint="#A5A5A5"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/scoreDashTextView"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/addButtonCardView"
+                android:layout_width="match_parent"
+                android:layout_height="52dp"
+                app:cardElevation="30dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:cardBackgroundColor="#8A6700">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:textSize="25sp"
+                    android:fontFamily="cursive"
+                    android:textColor="#FFFFFF"
+                    android:text="Add!"/>
+
+
+
+            </androidx.cardview.widget.CardView>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
