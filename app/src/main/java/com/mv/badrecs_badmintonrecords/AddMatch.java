@@ -35,6 +35,13 @@ import com.google.gson.Gson;
 import java.util.ArrayList;
 import java.util.List;
 
+
+
+// TODO : Add Stats Activity
+// TODO : Add calender view for selecting date
+// TODO : Add match detailed view
+// TODO : Add all friends and friend details activity
+
 public class AddMatch extends AppCompatActivity {
 
 
@@ -55,6 +62,7 @@ public class AddMatch extends AppCompatActivity {
     List<String> tableViewOpponentScoreEntries = new ArrayList<>();
 
     // TODO : Add warning if length of scores = 0
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

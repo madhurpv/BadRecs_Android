@@ -10,9 +10,12 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.BadRecsBadmintonRecords">
         <activity
+            android:name=".CalenderActivity"
+            android:exported="false" />
+        <activity
             android:name=".AddMatch"
             android:exported="false"
-            android:windowSoftInputMode="adjustPan"/>
+            android:windowSoftInputMode="adjustPan" />
         <activity
             android:name=".HomeActivity"
             android:exported="false" />

@@ -48,6 +48,8 @@ public class HomeActivity extends AppCompatActivity implements HomeRecyclerAdapt
     AllObservationClass allObservationsClassObj;
     String todaysDate;
 
+    FloatingActionButton floatingActionMoreDetails;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -103,6 +105,41 @@ public class HomeActivity extends AppCompatActivity implements HomeRecyclerAdapt
                 Intent intent = new Intent(HomeActivity.this, AddMatch.class);
                 intent.putExtra("todaysDate", todaysDate);
                 startActivity(intent);
+            }
+        });
+
+
+        floatingActionMoreDetails = findViewById(R.id.floatingActionMoreDetails);
+        floatingActionMoreDetails.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                final Dialog dialog = new Dialog(HomeActivity.this);
+                dialog.setContentView(R.layout.dialog_moreoptions);
+
+                CardView dialogCancelCardView = dialog.findViewById(R.id.dialogCancelCardView);
+                CardView dialogCalenderCardView = dialog.findViewById(R.id.dialogCalenderCardView);
+                CardView dialogDeleteCardView = dialog.findViewById(R.id.dialogDeleteCardView);
+
+                dialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
+
+                dialogCancelCardView.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        dialog.cancel();
+                    }
+                });
+
+                dialogCalenderCardView.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View view) {
+                        Intent intent = new Intent(HomeActivity.this, CalenderActivity.class);
+                        startActivity(intent);
+                    }
+                });
+
+
+
+                dialog.show();
             }
         });
 
