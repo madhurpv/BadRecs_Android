@@ -134,6 +134,7 @@ public class HomeActivity extends AppCompatActivity implements HomeRecyclerAdapt
                     public void onClick(View view) {
                         Intent intent = new Intent(HomeActivity.this, CalenderActivity.class);
                         startActivity(intent);
+                        dialog.dismiss();
                     }
                 });
 

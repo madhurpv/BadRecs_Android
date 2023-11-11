@@ -48,4 +48,13 @@ public class AllObservationClass {
     }
 
 
+    public List<String> getDates(){
+        List<String> listOfDates = new ArrayList<>();
+        for(int i=0; i<dayClassList.size(); i++){
+            listOfDates.add(dayClassList.get(i).date);
+        }
+        return listOfDates;
+    }
+
+
 }

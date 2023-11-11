@@ -3,6 +3,15 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/users/madhur/Apps/AndroidStudio/Projects/BadRecsBadmintonRecords/app/src/main/res/drawable/calender_highlight_center.xml" value="0.1715" />
+        <entry key="..\:/users/madhur/Apps/AndroidStudio/Projects/BadRecsBadmintonRecords/app/src/main/res/drawable/calender_highlight_circle.xml" value="0.1715" />
+        <entry key="..\:/users/madhur/Apps/AndroidStudio/Projects/BadRecsBadmintonRecords/app/src/main/res/drawable/calender_highlight_independent.xml" value="0.1715" />
+        <entry key="..\:/users/madhur/Apps/AndroidStudio/Projects/BadRecsBadmintonRecords/app/src/main/res/drawable/calender_highlight_left.xml" value="0.1715" />
+        <entry key="..\:/users/madhur/Apps/AndroidStudio/Projects/BadRecsBadmintonRecords/app/src/main/res/drawable/calender_highlight_right.xml" value="0.1715" />
+        <entry key="..\:/users/madhur/Apps/AndroidStudio/Projects/BadRecsBadmintonRecords/app/src/main/res/drawable/g_center.xml" value="0.2485" />
+        <entry key="..\:/users/madhur/Apps/AndroidStudio/Projects/BadRecsBadmintonRecords/app/src/main/res/drawable/g_independent.xml" value="0.2485" />
+        <entry key="..\:/users/madhur/Apps/AndroidStudio/Projects/BadRecsBadmintonRecords/app/src/main/res/drawable/g_left.xml" value="0.2485" />
+        <entry key="..\:/users/madhur/Apps/AndroidStudio/Projects/BadRecsBadmintonRecords/app/src/main/res/drawable/g_right.xml" value="0.2485" />
         <entry key="..\:/users/madhur/Apps/AndroidStudio/Projects/BadRecsBadmintonRecords/app/src/main/res/drawable/ic_baseline_add_circle_24.xml" value="0.2465" />
         <entry key="..\:/users/madhur/Apps/AndroidStudio/Projects/BadRecsBadmintonRecords/app/src/main/res/drawable/ic_baseline_remove_circle_24.xml" value="0.17" />
         <entry key="..\:/users/madhur/Apps/AndroidStudio/Projects/BadRecsBadmintonRecords/app/src/main/res/drawable/rounded_corners_background_dialog.xml" value="0.1335" />
