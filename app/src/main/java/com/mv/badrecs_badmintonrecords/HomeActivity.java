@@ -17,6 +17,7 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.gson.Gson;
@@ -32,7 +33,7 @@ public class HomeActivity extends AppCompatActivity implements HomeRecyclerAdapt
 
 
     public static TextView noDataToShowTextView;
-    TextView dateTextView;
+    TextView dateTextView, titleTextView;
 
     FloatingActionButton addNewObservation;
     public static HomeRecyclerAdapter adapter; // Edited from AddMatch.java
@@ -50,6 +51,8 @@ public class HomeActivity extends AppCompatActivity implements HomeRecyclerAdapt
 
     FloatingActionButton floatingActionMoreDetails;
 
+    // FIXME : URGENT Previous date work not stored
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -62,14 +65,30 @@ public class HomeActivity extends AppCompatActivity implements HomeRecyclerAdapt
 
         homeRecyclerView = findViewById(R.id.homeRecyclerView);
 
+        titleTextView = findViewById(R.id.titleTextView);
 
         sharedPreferences = getSharedPreferences("MySharedPref",MODE_PRIVATE);
         gson = new Gson();
         String json = sharedPreferences.getString("allObservationsClass", "");
         allObservationsClassObj = gson.fromJson(json, AllObservationClass.class);
-        LocalDateTime localDateTime = LocalDateTime.ofInstant(Instant.ofEpochMilli(System.currentTimeMillis()), ZoneId.systemDefault());
-        DateTimeFormatter dateTimeFormatter = DateTimeFormatter.ofPattern("dd-MM-yyyy");
-        todaysDate = localDateTime.format(dateTimeFormatter);
+
+        //Toast.makeText(this, getIntent().getExtras().getString("Date", "Today"), Toast.LENGTH_SHORT).show();
+        //Toast.makeText(this, "HasExtra : " + getIntent().hasExtra("Date"), Toast.LENGTH_SHORT).show();
+        if(getIntent().getExtras().getString("Date", "Today").equals("Today")){
+            LocalDateTime localDateTime = LocalDateTime.ofInstant(Instant.ofEpochMilli(System.currentTimeMillis()), ZoneId.systemDefault());
+            DateTimeFormatter dateTimeFormatter = DateTimeFormatter.ofPattern("dd-MM-yyyy");
+            todaysDate = localDateTime.format(dateTimeFormatter);
+            //Toast.makeText(this, "Hello!", Toast.LENGTH_SHORT).show();
+        }
+        else{
+            todaysDate = getIntent().getExtras().getString("Date","Today");
+            String toDisplay = "Matches on " + getIntent().getExtras().getString("Date","Today");
+            titleTextView.setText(toDisplay);
+            //Toast.makeText(this, "Hello2!", Toast.LENGTH_SHORT).show();
+            titleTextView.setTextSize(30);
+            dateTextView.setVisibility(View.INVISIBLE);
+            Log.d("QWERT", "No of matches : " + String.valueOf(allObservationsClassObj.getDayClass(getIntent().getExtras().getString("Date","Today")).no_of_matches));
+        }
         dateTextView.setText(todaysDate);
         if(allObservationsClassObj.containsDate(todaysDate)){
             titles = allObservationsClassObj.getDayClass(todaysDate).getMatchesTitles();

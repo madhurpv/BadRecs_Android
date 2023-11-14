@@ -41,6 +41,7 @@ public class StartActivity extends AppCompatActivity {
         }
         else{
             Intent intent = new Intent(StartActivity.this, HomeActivity.class);
+            intent.putExtra("Date", "Today");
             startActivity(intent);
             finish();
         }

@@ -3,6 +3,7 @@ package com.mv.badrecs_badmintonrecords;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.icu.text.SimpleDateFormat;
 import android.os.Bundle;
@@ -131,7 +132,10 @@ public class CalenderActivity extends AppCompatActivity implements OnDateSelecte
     public void onDateSelected(@NonNull MaterialCalendarView widget, @NonNull CalendarDay date, boolean selected) {
         Log.d("selected", "" + selected);
         if (selected == true) {
-
+            Intent intent = new Intent(CalenderActivity.this, HomeActivity.class);
+            intent.putExtra("Date", date.getDay() + "-" + (date.getMonth()+1) + "-" + date.getYear());
+            //Toast.makeText(this, "Sending : " + date.getDay() + "-" + date.getMonth()+1 + "-" + date.getYear(), Toast.LENGTH_SHORT).show();
+            startActivity(intent);
         }
     }
 
